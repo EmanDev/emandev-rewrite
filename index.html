@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EmanDev</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/halfmoon.css">
+    <link rel="shortcut icon" href="img/emandev-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Custom html Style-->
+    <style>
+
+    </style>
+</head>
+
+<body data-set-preferred-mode-onload="true">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Page wrapper with .with.navbar class -->
+    <div class="page-wrapper with-navbar">
+        <!-- Navbar (immediate child of the page wrapper) -->
+        <nav class="navbar">
+            <!-- Navbar content (with toggle sidebar button) -->
+            <div class="navbar-content">
+                <button class="btn btn-action" type="button">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Sidebar</span>
+                </button>
+            </div>
+            <!-- Navbar brand -->
+            <a href="#" class="navbar-brand">
+                <img src="img/emandev-optimized.png" alt="EmanDev">
+                EmanDev
+            </a>
+            <!-- Navbar text -->
+            <!-- <span class="navbar-text text-monospace">v3.0</span> -->
+            <!-- Navbar nav -->
+            <ul class="navbar-nav d-none d-md-flex ml-auto">
+                <li class="nav-item active">
+                    <a data-toggle="tooltip" data-title="Home" data-placement="bottom" href="index.html"
+                        class="nav-link"><i class="material-icons">home</i></a>
+                </li>
+                <li class="nav-item">
+                    <a data-toggle="tooltip" data-title="Downloads" data-placement="bottom" href="#" class="nav-link"><i
+                            class="material-icons">file_download</i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="material-icons">work</i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="material-icons">info</i></a>
+                </li>
+                <li class="nav-item">
+                    <a type="button" onclick="halfmoon.toggleDarkMode()" class="nav-link"><i
+                            class="material-icons">dark_mode</i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content-wrapper">
+            <h2>Page Title</h2>
+        </div>
+    </div>
+
+    <script src="js/halfmoon.js"></script>
+    <script type="text/javascript">
+        if (halfmoon.getPrefferedMode() == "light-mode"){}
+        else if (halfmoon.getPreferredMode() == "dark-mode"){}
+        else if (halfmoon-getPrefferedMode() == "not-set"){}
+    </script>
+    <script type="text/javascript">
+        if (halfmoon.readCookie("halfmoon-preferredMode")){
+            if (halfmoon.readCookie("halfmoon_preferredMode") == "light-mode"){}
+            else if (halfmoon.readCookie("halfmoon_preferredMode") == "dark-mode"){}
+        }
+    </script>
+</body>
+
+</html>
