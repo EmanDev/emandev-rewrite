@@ -1,3 +1,3 @@
-var halfmoon = require("./js/halfmoon-module");
+var halfmoon = require("./js/halfmoon-module.js");
 
 module.exports = halfmoon;

@@ -18,9 +18,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!--Custom html Style-->
+    <!--Custom index.HTML Style-->
     <style>
-
+        /*
+        * Made - 15/04/2021
+        * Updated - ####
+        */
     </style>
 </head>
 
@@ -28,62 +31,294 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <!-- Page wrapper with .with.navbar class -->
-    <div class="page-wrapper with-navbar">
+    <!-- Page wrapper with .with.navbar .with-sidebar .with-navbar-fixed-bottom class -->
+    <div data-sidebar-hidden="hidden" data-sidebar-type="overlayed-all"
+        class="page-wrapper with-navbar with-sidebar with-navbar-fixed-bottom">
         <!-- Navbar (immediate child of the page wrapper) -->
         <nav class="navbar">
             <!-- Navbar content (with toggle sidebar button) -->
             <div class="navbar-content">
-                <button class="btn btn-action" type="button">
+                <button class="btn" type="button" onclick="halfmoon.toggleSidebar()">
                     <i class="fa fa-bars"></i>
                     <span class="sr-only">Toggle Sidebar</span>
+                    Menu
                 </button>
             </div>
             <!-- Navbar brand -->
-            <a href="#" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 <img src="img/emandev-optimized.png" alt="EmanDev">
                 EmanDev
             </a>
             <!-- Navbar text -->
-            <!-- <span class="navbar-text text-monospace">v3.0</span> -->
+            <!-- Text here -->
             <!-- Navbar nav -->
-            <ul class="navbar-nav d-none d-md-flex ml-auto">
-                <li class="nav-item active">
-                    <a data-toggle="tooltip" data-title="Home" data-placement="bottom" href="index.html"
-                        class="nav-link"><i class="material-icons">home</i></a>
-                </li>
-                <li class="nav-item">
-                    <a data-toggle="tooltip" data-title="Downloads" data-placement="bottom" href="#" class="nav-link"><i
-                            class="material-icons">file_download</i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="material-icons">work</i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="material-icons">info</i></a>
-                </li>
-                <li class="nav-item">
-                    <a type="button" onclick="halfmoon.toggleDarkMode()" class="nav-link"><i
-                            class="material-icons">dark_mode</i></a>
-                </li>
-            </ul>
+            <div class="form-inline d-md-flex navbar-content ml-auto">
+                <button data-toggle="tooltip" data-title="Toggle dark mode" data-placement="left" class="btn"
+                    type="button" onclick="halfmoon.toggleDarkMode()"><i class="fa fa-moon-o"
+                        aria-hidden-true></i></button>
+            </div>
         </nav>
 
-        <div class="content-wrapper">
-            <h2>Page Title</h2>
+        <!-- Modals -->
+        <div class="modal" id="modal-info" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <a href="#" class="close" role="button" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <h4 class="modal-title">Information</h5>
+                        <hr>
+                        <h5 class="modal-title">Privacy</h5>
+                        <p>
+                            EmanDev.GitHub.Io does not collect any data from the people. This website is simply a static
+                            one and does not contain services which requires a user to input data onto fields that would
+                            ask for any personal information.
+                        </p>
+                        <hr>
+                        <h5 class="modal-title">Security</h5>
+                        <p>Due to the nature of the internet, some websites hosts files that are malicious and may cause
+                            problems to the users. EmanDev.GitHub.Io does not contain any of those files. For this
+                            reason, source of this website is <b>open</b> to the public.
+                            <br>
+                            <br>
+                            Check this link for further details: <a href="https://github.com/EmanDev?tab=repositories"
+                                target="_blank">GitHub Repositories</a>
+                        </p>
+                        <hr>
+                        <h5 class="modal-title">Copyrights</h5>
+                        <p>All possible items (images, videos, files, and etc) that can be seen here are free to use and
+                            others that are here are probably made by Me. Items made by different creators that have
+                            been used will be credited and thanked. If you have items here that I have used as part of
+                            this website and you think I do not have the permission for it to use, please contact me as
+                            soon as possible.
+                            <br>
+                            <br>
+                            Contact me through: <a
+                                href="mailto:emzzdroidlollipop@gmail.com">emzzdroidlollipop@gmail.com</a>.
+                        </p>
+
+                        <div class="text-right mt-20">
+                            <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                            <a href="#" class="btn mr-5" role="button">Close</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <h5 class="sidebar-title">Navigation</h5>
+                <div class="sidebar-divider"></div>
+                <a href="#!" class="sidebar-link sidebar-link-with-icon active">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </span>
+                    Home
+                </a>
+                <a href="downloads.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                    </span>
+                    Downloads
+                </a>
+                <a href="guides-and-tutorials.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                    </span>
+                    Guides and Tutorials
+                </a>
+                <br>
+                <h5 class="sidebar-title">GitHub Repositories</h5>
+                <div class="sidebar-divider"></div>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                    </span>
+                    A.S.B. - CS:S
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-server" aria-hidden="true"></i>
+                    </span>
+                    CS:S Server Launcher
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-edit" aria-hidden="true"></i>
+                    </span>
+                    CS:S ZRiot (Compiled)
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-edit" aria-hidden="true"></i>
+                    </span>
+                    CS:S ZR Uninstaller v1
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-edit" aria-hidden="true"></i>
+                    </span>
+                    CS:S ZR Uninstaller v2
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                    </span>
+                    EmanDev.GitHub.Io
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-h-square" aria-hidden="true"></i>
+                    </span>
+                    EmanDev.HerokuApp
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-hashtag" aria-hidden="true"></i>
+                    </span>
+                    File Hash Generator
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-music" aria-hidden="true"></i>
+                    </span>
+                    G.M.D.R.
+                </a>
+                <br>
+                <h5 class="sidebar-title">About & Contact</h5>
+                <div class="sidebar-divider"></div>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                    </span>
+                    Comment Thread
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                    Eman Marcaida
+                </a>
+                <a href="#modal-info" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </span>
+                    Information
+                </a>
+                <br>
+                <h5 class="sidebar-title">Socials</h5>
+                <div class="sidebar-divider"></div>
+                <a href="https://disqus.com/by/MonoChromeDev/" target="_blank"
+                    class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                    </span>
+                    Disqus
+                </a>
+                <a href="https://github.com/EmanDev" target="_blank" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </span>
+                    GitHub
+                </a>
+                <a href="https://twitter.com/Eman_MonoChrome" target="_blank"
+                    class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </span>
+                    Twitter
+                </a>
+                <a href="https://www.youtube.com/channel/UCtRWt7r0ZTyp1MrHhsZxOUA/featured?view_as=subscriber"
+                    target="_blank" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </span>
+                    YouTube
+                </a>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div id="main-content" class="content-wrapper">
+            <div class="d-flex h-full align-items-center justify-content-center">
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card">
+                                <h1 class="card-title">EmanDev.GitHub.Io</h1>
+                                <p class="text-justify text-extra-letter-spacing">EmanDev.GitHub.Io contains posts and
+                                    videos about games and
+                                    windows
+                                    tutorials along with certain app developments. Also showcases app developments along
+                                    with its usage and procedure of use.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <h1 class="card-title">Guides</h1>
+                                <p class="text-justify text-extra-letter-spacing">
+                                    Check out the guides by navigating through <kbd>Menu</kbd> > <kbd>Navigation</kbd> >
+                                    <a href="#">Guides and Tutorials</a>. It will take you to another page with a list
+                                    of guides and tutorials available. I hope you enjoy learning some new stuff!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card">
+                                <h1 class="card-title">YouTube Channel</h1>
+                                <p class="text-justify text-extra-letter-spacing">
+                                    Uploaded videos are base on ideas of which I think are interesting. I usually upload
+                                    guides/tutorials on how to do "x", particularly about games and windows, so that I
+                                    can help people, even myself,
+                                    when things cannot get through our heads. Visit channel by clicking here: <a
+                                        href="#" data-toggle="tooltip" data-title="Go to Channel"
+                                        data-placement="bottom"><i class="fa fa-external-link"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <h1 class="card-title">Popular Videos</h1>
+                                <ul style="list-style: none;">
+                                    <li>1. <a href="https://www.youtube.com/watch?v=Q61k6JxI8Dk&t" target="_blank">How
+                                            to setup Counter-Strike: Source Dedicated Server (2019)</a></li>
+                                    <li>2. <a href="https://www.youtube.com/watch?v=4M97oxkSdJk" target="_blank">How to
+                                            install Zombie Riot Mod on your CS:S Source Dedicated Server</a></li>
+                                    <li>3. <a href="https://www.youtube.com/watch?v=QQTnmzju4mY" target="_blank">SAO
+                                            Utils: Music Plugin and Baumi Language - EN Tutorial</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar navbar-fixed-bottom">
+            <span class="navbar-text ml-auto">
+                <div>
+                    Copyright &copy; <script>
+                        document.write(new Date().getFullYear())
+                    </script> <a href="https://github.com/EmanDev" target="_blank">Eman Marcaida (EmanDev)</a> All
+                    Rights Reserved
+                </div>
+            </span>
         </div>
     </div>
 
     <script src="js/halfmoon.js"></script>
     <script type="text/javascript">
-        if (halfmoon.getPrefferedMode() == "light-mode"){}
-        else if (halfmoon.getPreferredMode() == "dark-mode"){}
-        else if (halfmoon-getPrefferedMode() == "not-set"){}
+        if (halfmoon.getPreferredMode() == "light-mode") {} else if (halfmoon.getPreferredMode() ==
+            "dark-mode") {} else if (halfmoon - getPrefferedMode() == "not-set") {}
     </script>
     <script type="text/javascript">
-        if (halfmoon.readCookie("halfmoon-preferredMode")){
-            if (halfmoon.readCookie("halfmoon_preferredMode") == "light-mode"){}
-            else if (halfmoon.readCookie("halfmoon_preferredMode") == "dark-mode"){}
+        if (halfmoon.readCookie("halfmoon-preferredMode")) {
+            if (halfmoon.readCookie("halfmoon_preferredMode") == "light-mode") {} else if (halfmoon.readCookie(
+                    "halfmoon_preferredMode") == "dark-mode") {}
         }
     </script>
 </body>
