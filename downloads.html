@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>Downloads - EmanDev</title>
+    <meta name="description"
+        content="Downloads page for EmanDev.GitHub.Io which contains compiled developed applications and some files from the tutorials.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/halfmoon.css">
+    <link rel="shortcut icon" href="img/emandev-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list-group.css">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!--Custom index.HTML Style-->
+    <style>
+        /*
+        * Made - 15/04/2021
+        * Updated - 12/06/2021
+        */
+        @media(max-width: 880px) {
+            #respo-footer {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .content-wrapper {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars dark-mode" data-set-preferred-mode-onload="true">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Page wrapper with .with.navbar .with-sidebar .with-navbar-fixed-bottom class -->
+    <div data-sidebar-hidden="hidden" data-sidebar-type="overlayed-all"
+        class="page-wrapper with-navbar with-sidebar with-navbar-fixed-bottom">
+        <!-- Navbar (immediate child of the page wrapper) -->
+        <nav class="navbar">
+            <!-- Navbar content (with toggle sidebar button) -->
+            <div class="navbar-content">
+                <button class="btn" type="button" onclick="halfmoon.toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                    <span class="sr-only">Toggle Sidebar</span>
+                    Menu
+                </button>
+            </div>
+            <!-- Navbar brand -->
+            <a href="index.html" class="navbar-brand">
+                <img src="img/emandev-optimized.png" alt="EmanDev">
+                EmanDev
+            </a>
+            <!-- Navbar text -->
+            <!-- Text here -->
+            <!-- Navbar nav -->
+            <div class="form-inline d-md-flex navbar-content ml-auto">
+                <button id="themer" data-toggle="tooltip" data-title="Toggle Dark Mode" data-placement="left"
+                    class="btn btn-primary" type="button" onclick="halfmoon.toggleDarkMode()"
+                    aria-label="Toggle Dark Mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+            </div>
+        </nav>
+
+        <!-- Modals -->
+        <div class="modal" id="modal-info" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <a href="#" class="close" role="button" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <h4 class="modal-title">Information</h5>
+                        <hr>
+                        <h5 class="modal-title">Privacy</h5>
+                        <p>
+                            EmanDev.GitHub.Io does not collect any data from the people. This website is simply a static
+                            one and does not contain services which requires a user to input data onto fields that would
+                            ask for any personal information.
+                        </p>
+                        <hr>
+                        <h5 class="modal-title">Security</h5>
+                        <p>Due to the nature of the internet, some websites hosts files that are malicious and may cause
+                            problems to the users. EmanDev.GitHub.Io does not contain any of those files. For this
+                            reason, source of this website is <b>open</b> to the public.
+                            <br>
+                            <br>
+                            Check this link for further details: <a href="https://github.com/EmanDev?tab=repositories"
+                                target="_blank">GitHub Repositories</a>
+                        </p>
+                        <hr>
+                        <h5 class="modal-title">Copyrights</h5>
+                        <p>All possible items (images, videos, files, and etc) that can be seen here are free to use and
+                            others that are here are probably made by Me. Items made by different creators that have
+                            been used will be credited and thanked. If you have items here that I have used as part of
+                            this website and you think I do not have the permission for it to use, please contact me as
+                            soon as possible.
+                            <br>
+                            <br>
+                            Contact me through: <a
+                                href="mailto:emzzdroidlollipop@gmail.com">emzzdroidlollipop@gmail.com</a>.
+                        </p>
+
+                        <div class="text-center  mt-20">
+                            <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                            <a href="#" class="btn btn-block mr-5" role="button">Close</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!--EmanModal-->
+        <div class="modal" id="emanModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <a href="#" class="close" role="button" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <h5 class="modal-title text-center">Eman Marcaida</h5>
+                    <br>
+                    <p class="text-center">
+                        <img style="height: auto; max-width: 100%;" src="img/emandev.png" alt="Eman Marcaida">
+                    </p>
+                    <br>
+                    <p class="text-center">
+                        Hello, I am Eman Marcaida. I like guitars and computers, and I like to create guides and
+                        tutorials for people who could not wrap their heads around the things they <b>want</b> to do 🙂
+                    </p>
+                    <div class="text-center mt-20">
+                        <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                        <a href="#" class="btn btn-primary btn-block mr-5" role="button">Okay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--EmanDev HerokuApp-->
+        <div class="modal" id="emandevherokuapp" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <a href="#" class="close" role="button" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <h5 class="modal-title">EmanDev.HerokApp</h5>
+                    <p class="text-justify">
+                        This repository does not have a dedicated website that features its content. Checkout the links
+                        below for more.
+                    </p>
+                    <br>
+                    <div class="d-flex form-inline align-items-center justify-content-center">
+                        <a data-toggle="tooltip" data-title="Open in a new tab" data-placement="bottom" target="_blank"
+                            href="https://emandev-downloads.herokuapp.com/" class="btn btn-primary"><i
+                                class="fas fa-globe"></i> Open Heroku App</a>
+                        <a data-toggle="tooltip" data-title="Check source code" data-placement="bottom" target="_blank"
+                            href="https://github.com/EmanDev/emandev-downloads" class="btn btn-primary"><i
+                                class="fas fa-code"></i> Source Code</a>
+                    </div>
+                    <div class="text-center mt-20">
+                        <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                        <a href="#" class="btn btn-block mr-5" role="button">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Photo Credits Modal-->
+        <div class="modal" id="credits" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <a href="#" class="close" role="button" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <h5 class="modal-title">Credits</h5>
+                    <p class="text-justify">
+                        The following are credited for their work and thanked for allowing people to use their work.
+                    </p>
+                    <ul>
+                        <li>1. Photo by <a
+                                href="https://unsplash.com/@itskabita?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">kabita
+                                Darlami</a> on <a
+                                href="https://unsplash.com/s/photos/desktop-setup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+                        </li>
+                        <li>2.
+                            Photo by <a
+                                href="https://unsplash.com/@melindapack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mel</a>
+                            on <a
+                                href="https://unsplash.com/s/photos/desktop-setup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+                        </li>
+                    </ul>
+                    <div class="text-center mt-20">
+                        <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                        <a href="#" class="btn btn-primary btn-block mr-5" role="button">Okay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <h5 class="sidebar-title">Navigation</h5>
+                <div class="sidebar-divider"></div>
+                <a href="index.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                    </span>
+                    Home
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon active">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                    </span>
+                    Downloads
+                </a>
+                <a href="guides-and-tutorials.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                    </span>
+                    Guides and Tutorials
+                </a>
+                <br>
+                <h5 class="sidebar-title">GitHub Repositories</h5>
+                <div class="sidebar-divider"></div>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                    </span>
+                    A.S.B. - CS:S
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                    </span>
+                    CS:S Server Launcher
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                    </span>
+                    CS:S ZRiot (Compiled)
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                    </span>
+                    CS:S ZR Uninstaller v1
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                    </span>
+                    CS:S ZR Uninstaller v2
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                    </span>
+                    EmanDev.GitHub.Io
+                </a>
+                <a href="#emandevherokuapp" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-h-square" aria-hidden="true"></i>
+                    </span>
+                    EmanDev.HerokuApp
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-hashtag" aria-hidden="true"></i>
+                    </span>
+                    File Hash Generator
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-music" aria-hidden="true"></i>
+                    </span>
+                    G.M.D.R.
+                </a>
+                <br>
+                <h5 class="sidebar-title">About & Contact</h5>
+                <div class="sidebar-divider"></div>
+                <a href="https://emandev.github.io/comment-thread" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                    </span>
+                    Comment Thread
+                </a>
+                <a href="#emanModal" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                    </span>
+                    Eman Marcaida
+                </a>
+                <a href="#modal-info" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-info" aria-hidden="true"></i>
+                    </span>
+                    Information
+                </a>
+                <br>
+                <h5 class="sidebar-title">Socials</h5>
+                <div class="sidebar-divider"></div>
+                <a href="https://disqus.com/by/MonoChromeDev/" target="_blank"
+                    class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-comment" aria-hidden="true"></i>
+                    </span>
+                    Disqus
+                </a>
+                <a href="https://github.com/EmanDev" target="_blank" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </span>
+                    GitHub
+                </a>
+                <a href="https://twitter.com/Eman_MonoChrome" target="_blank"
+                    class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </span>
+                    Twitter
+                </a>
+                <a href="https://www.youtube.com/channel/UCtRWt7r0ZTyp1MrHhsZxOUA/featured?view_as=subscriber"
+                    target="_blank" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </span>
+                    YouTube
+                </a>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="align-items-center justify-content-center">
+                    <input id="searchBar" onkeyup="search_download()" type="search" class="form-control"
+                        placeholder="Find a file to download...">
+                    <hr>
+                    <ul class="list-group">
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">(Pre-Configured with
+                                Snapshots)
+                                Counter-Strike Source Zombie Riot v1.9.1b</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">(Pre-Configured) Counter-Strike Source
+                                Zombie Riot v1.9.1b</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">Aokana - Tools
+                                and Scripts (Translation is done by NekoNyan Soft)</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">Aokana - Tools
+                                and Scripts v2 (Updated AE VN Tools)</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">Counter-Strike: Global Offensive Video
+                                Settings</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">Counter-Strike: Source Server Launcher
+                                v1.3</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">Counter-Strike: Source Server Launcher
+                                v1.4</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">Counter-Strike: Source Server Launcher
+                                v1.5</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">Counter-Strike: Source Zombie Riot Mod -
+                                Hacks Extension V1.3.0.0</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">Counter-Strike: Source Zombie Riot Mod
+                                Uninstaller v1.0 - Final</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">Counter-Strike: Source Zombie Riot Mod
+                                Uninstaller v2.0</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">Counter-Strike: Source Zombie Riot Mod
+                                V1.9.1b (Fixed)</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">File Hash
+                                Generator</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">Foobar2000 CAD
+                                Component</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">Groove Music
+                                Database Refresher v1.0</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">Groove Music
+                                Database Refresher v1.1</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">Groove Music
+                                Database Refresher v1.2</a>
+                        </li>
+                        <li class="search-item"><a href=""
+                                class="list-group-item list-group-item-action">Metamod:Source</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">Sourcemod</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">SteamCMD</a>
+                        </li>
+                        <li class="search-item"><a href="" class="list-group-item list-group-item-action">Sword Art
+                                Online Utilities: Music Player Plugin Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="respo-footer" class="navbar d-flex navbar-fixed-bottom">
+            <span class="navbar-text mr-auto">
+                <div>
+                    <a href="#credits">Credits</a>
+                </div>
+            </span>
+            <span class="navbar-text ml-auto">
+                <div>
+                    &copy; <script>
+                        document.write(new Date().getFullYear())
+                    </script> <a href="https://github.com/EmanDev" target="_blank">EmanDev</a> All
+                    Rights Reserved
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="js/halfmoon.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        if (halfmoon.getPreferredMode() == "light-mode") {
+            console.log("cookie = light-mode")
+        } else if (halfmoon.getPreferredMode() == "dark-mode") {
+            console.log("cookie = dark-mode")
+        } else if (halfmoon.getPreferredMode() == "not-set") {
+            console.log("cookie is missing")
+        }
+    </script>
+    <script type="text/javascript">
+        // Make sure that the cookie exists
+        if (halfmoon.readCookie("halfmoon_preferredMode")) {
+            if (halfmoon.readCookie("halfmoon_preferredMode") == "light-mode") {
+                console.log("cookie said mode is light")
+            } else if (halfmoon.readCookie("halfmoon_preferredMode") == "dark-mode") {
+                console.log("cookie said mode is dark")
+            }
+        }
+    </script>
+    <script>
+        // Search Function for Search Bar
+        function search_download() {
+            let input = document.getElementById('searchBar').value
+            input = input.toLowerCase();
+            let x = document.getElementsByClassName('search-item');
+
+            for (i = 0; i < x.length; i++) {
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display = "none";
+                } else {
+                    x[i].style.display = "list-item";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
